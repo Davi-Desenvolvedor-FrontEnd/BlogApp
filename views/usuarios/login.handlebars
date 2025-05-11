@@ -1,0 +1,33 @@
+<h2 class="text-center my-4">Login do usuário</h2>
+
+<div class="container">
+  <div class="card col-12 col-sm-10 col-md-6 mx-auto p-3">
+    <div class="card-body">
+      <form action="/user/login" method="post" class="d-flex flex-column gap-3">
+        <div>
+          <label for="email" class="form-label">Email</label>
+          <input class="form-control" type="email" name="email" id="email" required />
+        </div>
+
+        <div>
+          <label for="senha" class="form-label">Senha</label>
+          <input class="form-control" type="password" id="senha" name="senha" minlength="8" required />
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="checkbox" onclick="MostrarSenha()" />
+          <label class="form-check-label" for="checkbox">Mostrar senha</label>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100 mt-2">Entrar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  function MostrarSenha() {
+    const campo = document.getElementById('senha');
+    campo.type = campo.type === "password" ? "text" : "password";
+  }
+</script>
