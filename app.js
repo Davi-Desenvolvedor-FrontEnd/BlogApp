@@ -143,7 +143,7 @@ app.get("/404", (req, res) => {
 
 app.use("/adm", adm);
 app.use("/user", user);
-const PORT = process.env.PORT || 8001
-app.listen(PORT, () => {
-  console.log("Api rodando em http://localhost:8001/");
+const PORT = process.env.PORT || 8001;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`API rodando na porta ${PORT}`);
 });
